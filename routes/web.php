@@ -22,3 +22,4 @@ Route::post('importdata', [ProductController::class,'importdata']);
 
 
 Route::get('/test',[ProductController::class,'test'] );
+Route::get('/userguide',[ProductController::class,'userguide'] );

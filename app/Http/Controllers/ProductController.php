@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Userguide;
 
 class ProductController extends Controller
 {
@@ -52,5 +53,17 @@ class ProductController extends Controller
     	
     	dd($product);
     }
+
+    public function userguide(){
+        $record = new Userguide();
+        $record->name = 'today best phone';
+        $record->description = 'This is an today best phone description.';
+        $record->status = 'deliver';
+        $result = $record->save();
+        dd($result);
+        echo "hell world";
+    }
+
+
 
 }
